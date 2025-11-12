@@ -15,25 +15,26 @@ public class RockPaperScissors {
         int randomIndex = random.nextInt(rps.length);
         String computerPick = rps[randomIndex];
 
-       // print computer's choice
-        System.out.println("Computer chose: " + computerPick );
+        // print computer's choice
+        System.out.println("Computer chose: " + computerPick);
 
         // determine rules and print result
-        if (userchoice.equalsIgnoreCase(computerPick));
-        System.out.println("It's a tie!");
+        if (userchoice.equalsIgnoreCase(computerPick)) {
+            System.out.println("It's a tie!");
 
-        else if (userchoice.equalsIgnoreCase("rock")) && (ComputerPick.equals ("paper"));
-        System.out.println("You lose!");
-        
-
-
-
-
-
-
-
-
-
+        } else if (userchoice.equalsIgnoreCase("rock") && (ComputerPick.equals("paper")) ||
+                (userchoice.equalsIgnoreCase("paper") && computerPick.equalsIgnoreCase("scissors")) ||
+                (userchoice.equalsIgnoreCase("scissors")) && computerPick.equalsIgnoreCase("rock")) {
+            System.out.println("You Lose!");
+        } else {
+            System.out.println("You Win!");
         }
+        System.out.println("Do you want to play again? yes/no");
+        playAgain = scanner.nextLine();
+    } while (playAgain = "yes");
+
+    System.out.println("Thanks for playing!");
+    scanner.close()
+
     }
 }
