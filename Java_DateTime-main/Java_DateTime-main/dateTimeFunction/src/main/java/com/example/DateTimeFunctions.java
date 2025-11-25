@@ -65,9 +65,8 @@ public class DateTimeFunctions {
 	public static String getTimeDifference(LocalDate date1, LocalDate date2) {
 		//YOUR CODE STARTS HERE
 
-
-        LocalDate ld1 = LocalDate.now();
         Period diff = Period.between(date1,date2);
+        // format period into a string.
         return String.format("Years-%d:Months-%d:Days-%d",
                 (diff.getYears()),
                 (diff.getMonths()),
